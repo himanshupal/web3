@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Convert',
 		component: Convert,
 		meta: {
-			title: 'Ether Units Conversion'
+			title: 'Ether Units Converter'
 		}
 	}
 ]

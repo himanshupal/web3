@@ -7,23 +7,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 export default defineComponent({
 	name: 'Layout',
 
 	setup() {
-		const { isReady, currentRoute } = useRouter()
-		const title = ref<string>('web3.himanshupal.xyz')
+		const domain = 'web3.himanshupal.xyz'
 
-		onMounted(async () => {
-			await isReady()
+		const { afterEach } = useRouter()
+		const title = ref<string>()
 
-			switch (currentRoute.value.fullPath) {
+		afterEach((to) => {
+			switch (to.fullPath) {
 				case '/convert':
 					title.value = 'Ether Units Converter'
 					break
+				default:
+					title.value = domain
 			}
 		})
 
