@@ -1,22 +1,36 @@
 {
+	"name": "web3",
 	"version": "0.1.0",
 	"license": "GPL-3.0-or-later",
+	"author": {
+		"name": "Himanshu Pal",
+		"email": "mailtohimanshupal@gmail.com",
+		"url": "https://himanshupal.xyz"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:himanshupal/web3.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"serve": "vite preview"
 	},
 	"dependencies": {
+		"ethers": "^5.5.4",
+		"mathjs": "^10.1.1",
+		"tslib": "^2.3.1",
 		"vue": "^3.0.5",
-		"vue-router": "4"
+		"vue-router": "4",
+		"web3": "^1.7.0"
 	},
 	"devDependencies": {
+		"@metamask/providers": "^8.1.1",
 		"@types/node": "^16.7.1",
 		"@vitejs/plugin-vue": "^1.2.5",
 		"@vue/compiler-sfc": "^3.0.5",
 		"autoprefixer": "^10.3.2",
 		"postcss": "^8.3.6",
-		"sass": "^1.38.1",
 		"tailwindcss": "^2.2.7",
 		"vite": "^2.4.2"
 	}

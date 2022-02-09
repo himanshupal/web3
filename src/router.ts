@@ -4,6 +4,7 @@ import { createRouter, createWebHistory, Router, RouterHistory, RouteRecordRaw, 
 import { appName } from '@/config.json'
 
 import Home from '@/pages/Home.vue'
+import Convert from '@/pages/Convert.vue'
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -11,7 +12,15 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Home',
 		component: Home,
 		meta: {
-			title: 'Welcome'
+			title: 'Projects'
+		}
+	},
+	{
+		path: '/convert',
+		name: 'Convert',
+		component: Convert,
+		meta: {
+			title: 'Ether Units Conversion'
 		}
 	}
 ]
